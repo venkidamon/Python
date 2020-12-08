@@ -1,0 +1,10 @@
+# ask the user to input their name. check the length of the 
+# name if it is greater than 5 characters long,
+# write a message telling them how many characters 
+
+user_input = input("Enter your name");
+user_len = len(user_input.strip());
+if user_len > 5:
+    print("your name comtains", user_len, "characters");
+else:
+    print("less than 5 characters");
