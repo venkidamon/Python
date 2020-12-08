@@ -1,0 +1,18 @@
+#write a code that asks the users to input a number between 1 and 5 inclusive.
+#the code will take the integer value and print out the string value so far
+#example if the user input 2 the code will print two. Reject any input that 
+#is not a number in that range.
+
+user_input = int(input());
+if(user_input == 1):
+    print("One");
+elif(user_input == 2):
+    print("Two");
+elif(user_input == 3):
+    print("Three");
+elif(user_input == 4):
+    print("Four");
+elif(user_input == 5):
+    print("Five");
+else:
+    print("Number not in range");
