@@ -1,0 +1,12 @@
+# ask the user for two integers then swap the contents of the variables. so if var_1=1 and 
+# var_2 = 2 initially, once the code has run var_1 should equal 2 and var_2 should equal 1.
+
+var_1 = int(input("Enter the first integer: "));
+var_2 = int(input("Enter the second integer: "));
+
+temp = 0;
+temp = var_1;
+var_1 = var_2;
+var_2 = temp;
+print("\nThe new value of first integer is : ",var_1);
+print("\nThe new value of second integer is : ",var_2);
