@@ -1,0 +1,14 @@
+# create a variable containing an integer between 1 and 10 inclusive. Ask the user
+# to guess the number. if they guess too high or too low, tell them they have not won.
+# Tell them they win if they guess the correct number.
+
+secret_Variable = 5;
+user_Guess  = int(input("Enter your guess number between 1 - 10: "));
+if(user_Guess == secret_Variable):
+    print("You guessed it right");
+elif(user_Guess > 10):
+    print("out of range");
+elif(user_Guess > secret_Variable):
+    print("sorry your guess is too high");
+else:
+    print("sorry you guessed too low");
