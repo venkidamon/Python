@@ -12,3 +12,21 @@ elif(user_Guess > secret_Variable):
     print("sorry your guess is too high");
 else:
     print("sorry you guessed too low");
+
+
+# updated one
+
+secret_Variable = 5;
+user_Guess = input("Enter your guess: ");
+if(user_Guess.isdigit()):
+    guess = int(user_Guess);
+    if(guess == secret_Variable):
+        print("WOW you guessed it right");
+    elif(guess > secret_Variable and guess <= 10):
+        print("You guessed too high!");
+    elif(guess < secret_Variable and guess >= 1):
+        print("You guessed too low!");
+    else:
+        print("Out of range");
+else:
+    print("The typed input is not a digit!");
