@@ -10,3 +10,11 @@ var_1 = var_2;
 var_2 = temp;
 print("\nThe new value of first integer is : ",var_1);
 print("\nThe new value of second integer is : ",var_2);
+
+
+
+
+#updated one
+#instead of using temp we can directly assign the values in python
+
+var_1, var_2 = var_2, var_1;
