@@ -1,0 +1,18 @@
+# ask the user for two integers between 1 and 20. if they are both greater than 15 return 
+# their product. If only one is greater than 15 return their sum, If neither are greater than 15 
+# return zero.
+
+userInput1 = input("Enter the number 1 : ");
+userInput2 = input("Enter the number 2 : ");
+
+if(userInput1.isdigit() and userInput2.isdigit()):
+    userInput1 = int(userInput1);
+    userInput2 = int(userInput2);
+    if(userInput1 > 15 and userInput2 > 15):
+        print(userInput1 * userInput2);
+    elif(userInput1 > 15 or userInput2 > 15):
+        print(userInput1 + userInput2);
+    else:
+        print(0);
+else:
+    print("user typed value is not int");
