@@ -1,0 +1,20 @@
+# Ask the user for two numbers between 1 and 100. Then count from the Lower number to the higher 
+# number. Print the result in the screen
+
+validate = True;
+while(validate):
+    num1 = int(input("Enter a number between 1 and 100 : "));
+    num2 = int(input("Enter a number between 1 and 100 : "));
+    if(num1 > 0 and num2 > 0 and num1 < 101 and num2 < 101 and not(num1 == num2)):
+        
+        validate = False;
+
+count = 0;
+
+if(num1 > num2):
+    num1, num2 = num2, num1;
+
+for i in range (num1, num2+1):
+    count+=1;
+
+print(count);
