@@ -1,0 +1,15 @@
+# write some code that will determine all odd and even numbers between 1 and 100
+# put the odds in the list named odd and the evens in a list named even
+
+n = 100
+even = []
+odd = []
+for i in range(1, n+1):
+    if(i%2 == 0):
+        even.append(i)
+    else:
+        odd.append(i)
+print("The odd numbers are")
+print(odd)
+print('The even numbers are')
+print(even)
