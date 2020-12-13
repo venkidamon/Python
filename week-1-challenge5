@@ -1,4 +1,4 @@
-
+#Factorial
 while(validate):
     userInput = input('Enter the number you wih to find the factorial')
     if(userInput.isdigit()):
