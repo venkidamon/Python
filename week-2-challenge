@@ -1,0 +1,12 @@
+# Ask the user to input a string and then print it out to the screen in the reverse order
+# (use a for loop)
+
+word = input("Enter the word : ");
+revStr = '';
+for char in word:
+    revStr = char + revStr;
+print(revStr);
+
+
+# updated one
+print(word[::-1]);
