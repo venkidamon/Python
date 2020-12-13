@@ -1,0 +1,12 @@
+
+while(validate):
+    userInput = input('Enter the number you wih to find the factorial')
+    if(userInput.isdigit()):
+        validate = False
+        
+fact = 1
+userInput = int(userInput)
+for i in range(1, userInput+1):
+    fact = fact * i
+    
+print(fact)
