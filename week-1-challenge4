@@ -1,0 +1,17 @@
+# ask the user to input a sequence of numbers. then calculate the mean and print the result
+
+validate = True
+number = [];
+while(validate):
+    userInput = input("Enter the number : ")
+    if(userInput.isdigit()):
+        userInput = int(userInput)
+        number.append(userInput)
+    elif(userInput == 'exit'):
+        validate = False
+    else:
+        print("Enter a valid number");
+        
+print(f'The median of the given numbers is: {sum(number)/len(number)}')
+    
+        
