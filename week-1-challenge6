@@ -1,0 +1,20 @@
+# Fibonaccinumbers
+
+
+validate = True
+
+while(validate):
+    userInput = input('Enter the number to get the fibonacci series')
+    if(userInput.isdigit()):
+        validate = False
+    else:
+        print('Enter a valid number')
+userInput = int(userInput)
+number = []
+a = 0
+b = 1
+for i in range(userInput):
+    number.append(a)
+    a, b = b, a+b
+
+print(f'The fibonacci series of the {userInput} number is : {number} ')
