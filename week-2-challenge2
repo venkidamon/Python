@@ -1,0 +1,25 @@
+# write python code that will create a sictionary containing key, value pairs that represents
+# the first 12 values of fibonacci sequence
+
+validate = True
+while validate:
+    userInput = input("Enter the number")
+    if(userInput.isdigit()):
+        validate = False
+    else:
+        print("Enter number only")
+a = 0
+b = 1
+userInput = int(userInput)
+list_1 = []
+list_1.append(a)
+list_2 = [x for x in range(1,userInput+1)]
+for i in range(userInput+1):
+    a,b = b, a+b
+    list_1.append(a)
+    
+    
+new_List = dict(zip(list_2,list_1))
+print(new_List)
+
+    
