@@ -1,0 +1,35 @@
+# create a dictionary to represent the open, high, low, close share price data for 4
+# imaginary companies 'python DS', 'pythonSoft', 'Pythazon' and 'Pybook' the 4 sets of
+# data are [12.87, 13.23, 11.42, 13.10],[23.54,25.76,21.87,22.33],[98.99,102.34,97.21,100.065],
+# [203.63,207.54,202.43,205.24]
+
+print('Data collection')
+
+num = input('Enter the no of companies : ')
+
+num = int(num)
+i = 1
+
+list1 = []
+list2 = ['Open','High','Low','Close']
+list3 = []
+while i <= num:
+    j=1
+    compName = input('Enter the Company Name :  ')
+    list1.append(compName)
+    while j <= len(list2):
+        values = input(f'Enter the {list2[j-1]} value')
+        list3.append(values)
+        j += 1
+    i+=1
+    
+    
+newVar = {}
+
+for i in range(len(list1)):
+    newVar[list1[i]] = dict(zip(list2,list3))
+    
+print(newVar)
+
+
+#additional changes needed
