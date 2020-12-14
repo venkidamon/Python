@@ -1,0 +1,25 @@
+# check if a key exists in a dictionary?
+
+capitals = {'France' : 'Paris',
+            'Spain' : 'Madrid',
+            'United Kingdom' : 'London',
+            'India' : 'New Delhi',
+            'United States' : 'Washington DC',
+            'Italy' : 'Rome',
+            'Denmark' : 'Copenhagen',
+            'Germany' : 'Berlin',
+            'Greece' : 'Athens',
+            'Bulgaria' : 'Sofia',
+            'Ireland' : 'Dublin',
+            'Mexico' : 'Mexico City'} 
+
+
+
+
+userInput = input("Enter the country name : ")
+userInput = userInput.title()
+
+if(userInput in capitals):
+    print(f"The capital of {userInput} is {capitals[userInput]}")
+else:
+    print('No data available')
