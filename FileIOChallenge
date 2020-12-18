@@ -1,0 +1,39 @@
+# create a new file called capitals.txt , store the names of five capital cities
+# in the file on the same line
+
+file = open('Capitals.txt','w')
+file.write('New Delhi, ' )
+file.write('Belgium, ' )
+file.write('England, ' )
+file.write('Washington DC, ' )
+file.write('Karachi, ' )
+file.close()
+
+
+#============================================================================================
+
+
+# write a code that request the user to input another capital city,
+# Add the city to the list of the cities in capitals. Then print the file to the screen
+
+user_input = input('Enter the new capital : ')
+file = open('capitals.txt','a')
+file.write('\n' + user_input)
+file.close()
+
+
+file = open('capitals.txt','r')
+print(file.read())
+file.close()
+
+#=============================================================================================
+
+
+# write a function that will copy the contents of one file to a new file
+
+def copyfile(inFile, outFile):
+    with open(inFile) as file:
+        with open(outFile,'w') as file1:
+            file1.write(file.read())
+
+copyfile('capitals.txt', 'NewCapital.txt')
