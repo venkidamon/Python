@@ -1,0 +1,31 @@
+# create a function that will calculate the sum of the two numbers. call it sum_two
+
+def sum_two(a,b):
+    return a + b
+
+print(sum_two(5, 5))
+
+#================================================================================================
+
+
+# write a function that performs multiplication of two aruguments. By default the function should
+# multiply the first the first argument by 2. call it multiply. 
+
+
+def multiply(a, b=2):
+    return a * b
+
+print(multiply(5))
+print(multiply(5,5))
+
+#=================================================================================================
+
+#write a function to calculate 'a' to the power of 'b'. if b is not given
+#it default value should be 2 call it as power.
+
+
+def power(a, b=2):
+    return a**b
+
+print(power(2))
+print(power(3,3))
