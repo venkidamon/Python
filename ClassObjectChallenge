@@ -1,0 +1,28 @@
+# create a class to represent a bank account. It will need to have a balance, a method of withdrawing 
+# money, depositing the money, displaying the balance to the screen. Create a instance of the 
+# bank account and check the methods work as expected
+
+class BankAccount(object):
+    def __init__(self, balance):
+        self.balance = balance
+    def displayBalance(self):
+        print(f'your balance is {self.balance}')
+    def deposit(self):
+        amount = float(input('Enter the amount to deposit : '))
+        self.balance += amount
+        print(f'Succcessful \n Your current balance is {self.balance}')
+    def withdraw(self):
+        amount = float(input('Emter the amount to withdraw : '))
+        if(amount > self.balance):
+            print('The withdraw amount exceeds the balance. Try Again!')
+        else:
+            self.balance -= amount
+            print(f'Successful \n Your current balance is {self.balance}')
+
+
+
+venki = BankAccount(1000)
+venki.displayBalance()
+venki.deposit()
+venki.withdraw()
+venki.displayBalance()
