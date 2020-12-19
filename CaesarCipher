@@ -1,0 +1,54 @@
+
+
+def shift_amount(i):
+    '''Will determine the shift, taking into account the length of the alphabet. Takes integer - returns integer'''
+    return i%26
+def encrypt(text,required_shift):
+    out_string = ''
+    text = text.lower()
+    for char in text:
+        if char not in alphabet:
+            out_string = out_string + char
+        else:    
+            alpha_index = alphabet.find(char)
+            out_string = out_string + alphabet[shift_amount(alpha_index +required_shift)]
+    return out_string
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+encrypt('The cat sat on the wall',5)
+#===============================================================================================================================
+
+
+#using ascii 
+
+def encrypt(a,b = 5):
+    newLetter = ord(a)+b
+    return chr(newLetter)
+
+def decrypt(a, b = 5):
+    newLetter = ord(a)-3
+    return chr(newLetter)
+
+def converter(j):
+    sentence = ''
+    return sentence.join(j)
+
+cipherText = input('Enter the cipher text : ') #.replace(" ", "")
+
+list_1 = []
+for i in cipherText:
+    list_1.append(i)
+    
+list_2 = []
+for j in range(len(list_1)):
+    list_2.append(encrypt(list_1[j]))    
+
+list_3 = []
+for k in range(len(list_2)):
+    list_3.append(decrypt(list_2[k]))
+    
+    
+print(f'The enter cipher text is \n{cipherText}')
+ 
+print(f'The converted cipher text is \n{converter(list_2)}')
+
+print(f'The decrypt text is \n{converter(list_3)}')
