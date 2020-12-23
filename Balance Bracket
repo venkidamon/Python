@@ -1,0 +1,66 @@
+def order(a):
+    # length = len(a)
+    half_length = len(a)/2
+    print(half_length)
+  
+    # remaining_length = half_length - length
+    list_2 = []
+    for i in range(int(half_length)+1):
+        if(i == 0):
+            if(a[i] == '{'):
+                print(f'{a[i]} is executed')
+                list_2.append('true')
+            else:
+                print(f'{a[i]} is executed')
+                list_2.append('false')
+        elif(i == 1):
+            print(f'{a[i]} is executed')
+            if(a[i] == '['):
+                list_2.append('true')
+            else:
+                list_2.append('false')
+        elif(i==2):
+            print(f'{a[i]} is executed')
+            if(a[i] == '('):
+                list_2.append('true')
+            else:
+                list_2.append('false')
+    for i in range(-3,0,1):
+        if(i == -1):
+            if(a[i] == '}'):
+                print(f'{a[i]} is executed')
+                list_2.append('true')
+            else:
+                list_2.append('false')
+        elif(i == -2):
+            if(a[i] == ']'):
+                print(f'{a[i]} is executed')
+                list_2.append('true')
+            else:
+                list_2.append('false')
+        elif(i == -3):
+            if(a[i] == ')'):
+                print(f'{a[i]} is executed')
+                list_2.append('true')
+            else:
+                list_2.append('false')
+    if(list_2[0] == 'true' and list_2[-1] == 'true'):
+        if(list_2[1] == 'true' and list_2[-2] == 'true'):
+            if(list_2[2] == 'true' and list_2[-3] == 'true'):
+                return 'The format is correct'
+            else:
+                return 'error'
+        else:
+            return 'error'
+    else:
+        return 'error'
+
+userinput = input('Enter the string with brackets');
+
+list_1 = []
+
+for i in userinput:
+    list_1.append(i)
+
+print(order(list_1))
+
